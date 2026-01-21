@@ -1,0 +1,138 @@
+/* RESET & BASE */
+* { margin:0; padding:0; box-sizing:border-box; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+html { scroll-behavior: smooth; }
+body { background:#00cce7; color:#111827; }
+
+/* BUTTON */
+.btn { display:inline-block; padding:10px 24px; border-radius:999px; text-decoration:none; font-size:0.9rem; cursor:pointer; border:1px solid #111; background:transparent; color:#111; }
+.btn.primary { background:#111; color:#f9fafb; }
+
+/* SKILLS */
+.skills { background:#00cce7; padding:100px 10% 70px; }
+.skills-list { max-width:900px; }
+.skill { margin-bottom:22px; }
+.skill-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
+.skill-name { font-size:0.85rem; letter-spacing:2px; text-transform:uppercase; }
+.skill-percent { font-size:0.8rem; }
+.progress { width:100%; height:8px; background:rgba(255,255,255,0.3); border-radius:999px; overflow:hidden; }
+.fill { height:100%; border-radius:999px; transition: width 1s ease-in-out; }
+.fill.cplus { width:0; background:#164f7f; }
+.fill.python { width:0; background:#ff9900; }
+.fill.html { width:0; background:#e44d26; }
+.fill.css { width:0; background:#264de4; }
+
+/* ABOUT */
+.about { padding:100px 10% 70px; }
+.about-subtitle { font-size:1.05rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:20px; }
+.about p { max-width:900px; line-height:1.5; margin-bottom:25px; }
+.about-quote { background:#b8a69b; padding:25px 30px; max-width:900px; font-size:1.1rem; margin:0 auto 40px; }
+
+/* CONTACT */
+.contact { background:#00cce7; padding:100px 10% 70px; }
+.contact h3 { margin-bottom:15px; }
+.contact-form { max-width:400px; display:flex; flex-direction:column; gap:10px; }
+.contact-form input, .contact-form textarea { padding:10px 12px; border:1px solid #777; font-size:0.95rem; background:#f6f6f6; }
+.contact-form input:focus, .contact-form textarea:focus { outline:none; border-color:#111; }
+.socials { margin-top:15px; }
+.socials a { margin-right:10px; text-decoration:none; color:#111; }
+
+/* FOOTER */
+.footer { text-align:center; padding:20px 10%; font-size:0.8rem; color:#555; border-top:1px solid rgba(0,0,0,0.2); }
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-toggle {
+  width: 32px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hidden menu links by default */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  background: rgba(15, 23, 42, 0.85);
+  color: #e5e7eb;
+  padding: 10px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* When open */
+.menu-links.open {
+  width: 140px;
+  opacity: 1;
+}
+
+.menu-links a i {
+  font-size: 1rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+.menu-links a span {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.menu-links a:hover {
+  background: #22c55e;
+  color: #020617;
+}
+
+@media(max-width:768px){
+  .side-menu { display: none; }
+}
+
+
+
+
+/* STATS */
+.stats-bg { min-height:10vh; background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("532091.jpg") center / cover no-repeat fixed; display:flex; align-items:center; }
+.stats { display:flex; gap:50px; width:100%; padding:0 10%; justify-content:space-around; }
+.stat { flex:1; text-align:center; }
+.stat .number { color:#fff; font-size:2rem; font-weight:600; }
+.stat .label { color:rgba(255,255,255,0.8); letter-spacing:2px; font-size:0.75rem; }

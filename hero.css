@@ -1,0 +1,63 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #00cce7;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, #915eff 0, transparent 55%),
+    radial-gradient(circle at 80% 0%, #22c55e 0, transparent 55%),
+    radial-gradient(circle at 80% 80%, #f97316 0, transparent 55%),
+    url("532091.jpg") center/cover no-repeat;
+  opacity: 0.5;
+  filter: blur(40px);
+  z-index: -2;
+}
+
+.hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px;
+  align-items: center;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.7));
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 0 40px rgba(15, 23, 42, 0.8), 0 0 120px rgba(79, 70, 229, 0.5);
+  z-index: 1;
+  color: #e5e7eb;
+}
+
+.hero-left h3 { font-size: 0.95rem; color: #9ca3af; margin-bottom: 8px; letter-spacing: 2px; text-transform: uppercase; }
+.hero-left h2 { font-size: 1.4rem; margin-bottom: 15px; }
+.hero-left h2 span { color: #22c55e; }
+.hero-left p { font-size: 0.95rem; color: #9ca3af; max-width: 420px; margin-bottom: 20px; }
+
+.hero-socials { display: flex; gap: 14px; margin-bottom: 20px; }
+.hero-socials a {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid rgba(148,163,184,0.7);
+  display: flex; align-items: center; justify-content: center;
+  color: #e5e7eb; text-decoration: none;
+  backdrop-filter: blur(8px); transition: 0.25s;
+}
+.hero-socials a:hover { background: #22c55e; border-color: #22c55e; color: #020617; }
+
+.hero-right { position: relative; display: flex; align-items: center; justify-content: center; }
+.hero-right .circle { width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle at 30% 10%, #fde68a 0, #f97316 40%, #4f46e5 80%); filter: drop-shadow(0 0 40px rgba(129, 140, 248, 0.8)); }
+.hero-right img { position: absolute; width: 210px; height: 210px; border-radius: 50%; object-fit: cover; border: 4px solid #0f172a; }
+
+/* Typing effect */
+.typing { display: inline-block; overflow: hidden; white-space: nowrap; border-right: 2px solid #000; }
